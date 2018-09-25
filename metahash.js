@@ -1,6 +1,6 @@
 class MetaHash {
 	
-	constructor(options = {}) {
+	constructor() {
 		this.apiUrl = 'http://172.104.157.248:5795';
 		this.tokenPrefix = 'MHC';
 	}
