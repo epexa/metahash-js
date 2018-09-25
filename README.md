@@ -19,7 +19,9 @@
 
 - ### apiUrl
 HTTP-адрес ноды.
+
 Значение по умолчанию: "172.104.157.248:5795"
+
 Пример использования:
 ```js
 metahash.apiUrl = '172.104.157.248:5795';
@@ -27,7 +29,9 @@ metahash.apiUrl = '172.104.157.248:5795';
 
 - ### tokenPrefix
 Префикс токена для вывода значений баланса.
+
 Значение по умолчанию: "MHC"
+
 Пример использования:
 ```js
 metahash.tokenPrefix = 'MHC';
@@ -39,8 +43,10 @@ metahash.tokenPrefix = 'MHC';
 
 - ### fetchBalance
 Получение баланса адреса.
+
 Параметры:
 ***address***
+
 Пример использования:
 ```js
 metahash.fetchBalance('0x009af1b05f5fa19d7054c0deeab32ecb3b1adac6c7f02b2c0b', (res, err) => {
@@ -51,8 +57,10 @@ metahash.fetchBalance('0x009af1b05f5fa19d7054c0deeab32ecb3b1adac6c7f02b2c0b', (r
 
 - ### fetchHistory
 Получение транзакций по адресу.
+
 Параметры:
 ***address***
+
 Пример использования:
 ```js
 metahash.fetchHistory('0x009af1b05f5fa19d7054c0deeab32ecb3b1adac6c7f02b2c0b', (res, err) => {
@@ -63,8 +71,10 @@ metahash.fetchHistory('0x009af1b05f5fa19d7054c0deeab32ecb3b1adac6c7f02b2c0b', (r
 
 - ### getTx
 Получение информации о транзакции по хэшу.
+
 Параметры:
 ***hash***
+
 Пример использования:
 ```js
 metahash.getTx('23fb8f98f1faecf04c23112ad47bba7b42ff7bcec0cdf22ce231061d02e9ad2c', (res, err) => {
