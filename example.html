@@ -1,0 +1,22 @@
+<script src="metahash.js"></script>
+<script>
+// http://venus.mhscan.com/?page=address&id=0x009af1b05f5fa19d7054c0deeab32ecb3b1adac6c7f02b2c0b
+metahash.fetchBalance('0x009af1b05f5fa19d7054c0deeab32ecb3b1adac6c7f02b2c0b', (res, err) => {
+	if (res) console.log('fetchBalance', res);
+	else console.error('fetchBalance', err)
+});
+
+// http://venus.mhscan.com/?page=address&id=0x009af1b05f5fa19d7054c0deeab32ecb3b1adac6c7f02b2c0b
+metahash.fetchHistory('0x009af1b05f5fa19d7054c0deeab32ecb3b1adac6c7f02b2c0b', (res, err) => {
+	if (res) console.log('fetchHistory', res);
+	else console.error('fetchHistory', err)
+});
+
+// http://venus.mhscan.com/?page=tx&id=23fb8f98f1faecf04c23112ad47bba7b42ff7bcec0cdf22ce231061d02e9ad2c
+metahash.getTx('23fb8f98f1faecf04c23112ad47bba7b42ff7bcec0cdf22ce231061d02e9ad2c', (res, err) => {
+	if (res) console.log('getTx', res);
+	else console.error('getTx', err)
+});
+
+metahash.balanceFormatter(20962350000);
+</script>
