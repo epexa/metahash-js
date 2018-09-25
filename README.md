@@ -85,8 +85,10 @@ metahash.getTx('23fb8f98f1faecf04c23112ad47bba7b42ff7bcec0cdf22ce231061d02e9ad2c
 
 - ### balanceFormatter
 Форматирование баланса в правильный вид.
+
 Параметры:
 ***balance***
+
 Пример использования:
 ```js
 metahash.balanceFormatter(20962350000);
