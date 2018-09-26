@@ -12,6 +12,7 @@
 
 ## Пример
 Пример использования находится в [example.html](example.html).
+[Запустить пример](https://epexa.github.io/metahash-js/example.html) с GitHub Pages **(если нода работает только по HTTP без HTTPS, то в браузере нужно разрешить [запустить небезопасные скрипты](https://user-images.githubusercontent.com/2198826/46060896-5cf5aa80-c16d-11e8-9c50-9b8813923279.png))**.
 
 ------------
 
@@ -91,7 +92,7 @@ metahash.getTx('23fb8f98f1faecf04c23112ad47bba7b42ff7bcec0cdf22ce231061d02e9ad2c
 
 Пример использования:
 ```js
-metahash.balanceFormatter(20962350000);
+let balance = metahash.balanceFormatter(20962350000);
 ```
 
 ------------
