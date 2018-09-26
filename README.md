@@ -24,6 +24,7 @@ metahash.имяМетода(первыйПараметр, (res, err) => {
 
 ## Пример
 Пример использования находится в [example.html](example.html).
+
 [Запустить пример](https://epexa.github.io/metahash-js/example.html) с GitHub Pages **(если нода работает только по HTTP без HTTPS, то в браузере нужно разрешить [запустить небезопасные скрипты](https://user-images.githubusercontent.com/2198826/46060896-5cf5aa80-c16d-11e8-9c50-9b8813923279.png))**.
 
 ------------
@@ -108,3 +109,23 @@ let balance = metahash.balanceFormatter(20962350000);
 ```
 
 ------------
+
+## Поддержать проект:
+
+BTC: [3LPVbQ8fu4um4aY16tpeie62kznGJywrai](bitcoin:3LPVbQ8fu4um4aY16tpeie62kznGJywrai)
+ETH: [0x230D2C5aE86fFB69C8e6d575aB634f345aE497e5](ethereum:0x230D2C5aE86fFB69C8e6d575aB634f345aE497e5)
+
+------------
+
+## Контакты:
+
+Telegram: @epexa
+
+------------
+
+## Лицензия
+Apache License
+
+Version 2.0, January 2004
+
+Подробнее в [LICENSE](LICENSE).
