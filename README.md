@@ -1,11 +1,18 @@
+![logo_en](https://user-images.githubusercontent.com/2198826/46068471-e44d1900-c181-11e8-99cf-0234839623f5.png)
+
 # [MetaHash](https://metahash.org/) JavaScript library
 ### Версия 0.1.0
 
 ------------
 
+## Презентация
+![google-slides-icon](https://user-images.githubusercontent.com/2198826/46068734-88cf5b00-c182-11e8-8f89-acf0056f3593.png) [goo.gl/ptF2ei](https://goo.gl/ptF2ei)
+
+------------
+
 ## Использование
 1. Подключить MetaHash JavaScript библиотеку:
-```
+```html
 <script src="https://epexa.github.io/metahash-js/metahash.js"></script>
 ```
 2. Если нужно изменить конфигурацию: адрес ноды, и т.д.:
