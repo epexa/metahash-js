@@ -113,13 +113,14 @@ let balance = metahash.balanceFormatter(20962350000);
 ## Поддержать проект:
 
 BTC: [3LPVbQ8fu4um4aY16tpeie62kznGJywrai](bitcoin:3LPVbQ8fu4um4aY16tpeie62kznGJywrai)
+
 ETH: [0x230D2C5aE86fFB69C8e6d575aB634f345aE497e5](ethereum:0x230D2C5aE86fFB69C8e6d575aB634f345aE497e5)
 
 ------------
 
 ## Контакты:
 
-Telegram: @epexa
+Telegram: [@epexa](https://t.me/epexa)
 
 ------------
 
