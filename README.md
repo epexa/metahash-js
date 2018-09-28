@@ -1,7 +1,7 @@
 ![logo_en](https://user-images.githubusercontent.com/2198826/46068471-e44d1900-c181-11e8-99cf-0234839623f5.png)
 
 # [MetaHash](https://metahash.org/) JavaScript library
-### Версия 0.1.0
+### Версия 0.2.0
 
 ------------
 
@@ -13,7 +13,9 @@
 ## Использование
 1. Подключить MetaHash JavaScript библиотеку:
 ```html
-<script src="https://epexa.github.io/metahash-js/metahash.js"></script>
+<script src="https://epexa.github.io/metahash-js/metahash.min.js"></script>
+или через CDN:
+<script src="https://cdn.jsdelivr.net/gh/epexa/metahash-js@0.2.0/metahash.min.js"></script>
 ```
 2. Если нужно изменить конфигурацию: адрес ноды, и т.д.:
 ```js
@@ -104,6 +106,45 @@ metahash.getTx('23fb8f98f1faecf04c23112ad47bba7b42ff7bcec0cdf22ce231061d02e9ad2c
 });
 ```
 
+- ### createTx
+Создание транзакции.
+
+Параметры:
+***to***
+***value***
+***fee***
+***nonce***
+***data***
+***publicKeyHex***
+***privateKey***
+***youHashAddress***
+
+Пример использования:
+```js
+metahash.apiUrl = 'http://139.162.42.43:9999';
+let publicKeyBase64 = 'MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE8gBrTLUQxXDZQ4f/OpiFWe4dhNbEo11PtFkq/0NgXt+AxGwmiWUhojtI56Hj2H3QpxGZCqrjxldDC4IHzpyVfw=='; // from key.pub
+let to = '0x0003f6441039b7f944c82ac62f7c124918e02c203b5820f5ed';
+let value = 1000;
+let fee = 0;
+let nonce = null;
+let data = '';
+let publicKeyHex = metahash.base64toHex(publicKeyBase64); // convert from base64 to hex
+/*
+	1. openssl ec -in key.pem -noout -text
+	2. copy "priv" value:
+		42:d1:ae:22:4c:27:fc:02:a4:bc:43:b9:ec:47:6b:
+		bd:21:b4:51:69:db:97:35:f9:c6:1d:31:a0:87:21:
+		04:4f
+	3. remove symbol ":"
+*/
+let privateKey = '42d1ae224c27fc02a4bc43b9ec476bbd21b45169db9735f9c61d31a08721044f';
+let youHashAddress = '0x009b84f533aa2192456a7e944eb471183abbceafe678a98984';
+metahash.createTx(to, value, fee, nonce, data, publicKeyHex, privateKey, youHashAddress, (res, err) => {
+	if (res) console.log('createTx', res, 'http://mhscan.com/?page=tx&id=' + res.params);
+	else console.error('createTx', err)
+});
+```
+
 - ### balanceFormatter
 Форматирование баланса в правильный вид.
 
@@ -122,6 +163,8 @@ let balance = metahash.balanceFormatter(20962350000);
 BTC: [3LPVbQ8fu4um4aY16tpeie62kznGJywrai](bitcoin:3LPVbQ8fu4um4aY16tpeie62kznGJywrai)
 
 ETH: [0x230D2C5aE86fFB69C8e6d575aB634f345aE497e5](ethereum:0x230D2C5aE86fFB69C8e6d575aB634f345aE497e5)
+
+MHC: [0x00a1d0f653dd39c33255acac2f5ea4fb3c3ea5795908c3bf05](mhc:0x00a1d0f653dd39c33255acac2f5ea4fb3c3ea5795908c3bf05)
 
 ------------
 
