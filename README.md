@@ -6,7 +6,25 @@
 ------------
 
 ## Презентация
-![google-slides-icon](https://user-images.githubusercontent.com/2198826/46068734-88cf5b00-c182-11e8-8f89-acf0056f3593.png) [goo.gl/ptF2ei](https://goo.gl/ptF2ei)
+![46068734-88cf5b00-c182-11e8-8f89-acf0056f3593](https://user-images.githubusercontent.com/2198826/46261295-557e2a80-c4fa-11e8-992a-f958facdea0f.png) **[goo.gl/ptF2ei](https://goo.gl/ptF2ei)**
+
+------------
+
+## Песочница
+![metahash-playground](https://user-images.githubusercontent.com/2198826/46261230-3501a080-c4f9-11e8-8390-84730faead28.png)
+
+Песочница находится в [playground.html](playground.html).
+
+[Запустить песочницу](https://epexa.github.io/metahash-js/playground.html) с GitHub Pages **(если нода работает только по HTTP без HTTPS, то в браузере нужно разрешить [запустить небезопасные скрипты](https://user-images.githubusercontent.com/2198826/46060896-5cf5aa80-c16d-11e8-9c50-9b8813923279.png))**.
+
+------------
+
+TODO:
+- [ ] доработать песочницу
+- [ ] метод getIpFromDns для получения ip-адреса ноды
+- [ ] получение адреса (hash) по публичному ключу
+- [ ] сделать версию для NodeJS (NPM)
+- [ ] README на английском
 
 ------------
 
@@ -19,7 +37,7 @@
 ```
 2. Если нужно изменить конфигурацию: адрес ноды, и т.д.:
 ```js
-metahash.apiUrl = '172.104.157.248:5795';
+metahash.apiUrl = 'http://172.104.157.248:5795';
 ```
 3. Вызвать необходимый метод. Методы возвращают коллбэк в котором есть две переменных: **res** - результат запроса и **err** - в случае ошибки:
 ```js
@@ -43,11 +61,11 @@ metahash.имяМетода(первыйПараметр, (res, err) => {
 - ### apiUrl
 HTTP-адрес ноды.
 
-Значение по умолчанию: "172.104.157.248:5795"
+Значение по умолчанию: "http://172.104.157.248:5795"
 
 Пример использования:
 ```js
-metahash.apiUrl = '172.104.157.248:5795';
+metahash.apiUrl = 'http://172.104.157.248:5795';
 ```
 
 - ### tokenPrefix
@@ -111,12 +129,19 @@ metahash.getTx('23fb8f98f1faecf04c23112ad47bba7b42ff7bcec0cdf22ce231061d02e9ad2c
 
 Параметры:
 ***to***
+
 ***value***
+
 ***fee***
+
 ***nonce***
+
 ***data***
+
 ***publicKeyHex***
+
 ***privateKey***
+
 ***youHashAddress***
 
 Пример использования:

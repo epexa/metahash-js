@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>MetaHash JavaScript playground</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+		<style>
+			body {
+			  margin-bottom: 60px;
+			}
+			html {
+			  position: relative;
+			  min-height: 100%;
+			}
+			.navbar-brand {
+			  font-weight: bold;
+			  padding: 0;
+			}
+			.navbar-brand img {
+			  position: relative;
+			  top: 7px;
+			  height: 16px;
+			}
+			footer {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 60px;
+				line-height: 60px;
+				background-color: #f5f5f5;
+				text-align: center;
+			}
+			.navbar li {
+			  margin: 0 20px;
+			}
+			.card-body {
+				padding-bottom: 0;
+			}
+			#network-form {
+			    margin-right: -30px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<div class="container">
+					<a class="navbar-brand" href="# ">
+						<img src="https://static.metahash.org/img/logo_mail.svg" class="d-inline-block align-top" alt="MegaHash"> JavaScript playground
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item">
+								<a class="nav-link" target="_blank" href="https://github.com/epexa/metahash-js">JavaScript library</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" target="_blank" href="https://developers.metahash.org/hc/en-us/sections/360000600513-General">Documentation</a>
+							</li>
+						</ul>
+						<form class="form-inline my-2 my-lg-0 col-sm-5" id="network-form">
+							<div class="col-sm-12">
+								<div class="input-group input-group-sm">
+									<input type="text" class="form-control" name="ip-address" placeholder="API URL">
+									<div class="input-group-append">
+										<button class="btn btn-warning btn-sm" id="node-address-modal-btn" type="button"><span class="icon-database"></span> Change</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<article>
+			<main role="main" class="container">
+				<br>
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<form id="fetch-balance-form">
+								<fieldset>
+									<div class="row">
+										<div class="col">
+											<h5 class="card-title"><a target="_blank" href="https://github.com/epexa/metahash-js#fetchbalance">fetchBalance</a></h5>
+											<h6 class="card-subtitle mb-2 text-muted">get balance information for address</h6>
+											<br>
+											<div class="form-group">
+												<label for="fetch-balance-address">Address:</label>
+												<input type="text" class="form-control" name="address" id="fetch-balance-address" placeholder="0x009b84f533aa2192456a7e944eb471183abbceafe678a98984" required>
+												<small class="form-text text-muted">Example: 0x009b84f533aa2192456a7e944eb471183abbceafe678a98984</small>
+											</div>
+											<div class="form-group">
+												<button class="btn btn-success" type="submit">Send request</button>
+												<a class="btn btn-info explorer-btn" target="_blank" href="">Open in explorer</a>
+												<button class="btn btn-danger clear-btn" type="button">Clear</button>
+											</div>
+										</div>
+										<div class="col">
+											<div class="form-group">
+												<label>Result:</label>
+												<textarea class="form-control" name="log" rows="7" readonly></textarea>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<form id="fetch-history-form">
+								<fieldset>
+									<div class="row">
+										<div class="col">
+											<h5 class="card-title"><a target="_blank" href="https://github.com/epexa/metahash-js#fetchhistory">fetchHistory</a></h5>
+											<h6 class="card-subtitle mb-2 text-muted">get history transactions for address</h6>
+											<br>
+											<div class="form-group">
+												<label for="fetch-balance-address">Address:</label>
+												<input type="text" class="form-control" name="address" id="fetch-balance-address" placeholder="0x009b84f533aa2192456a7e944eb471183abbceafe678a98984" required>
+												<small class="form-text text-muted">Example: 0x009b84f533aa2192456a7e944eb471183abbceafe678a98984</small>
+											</div>
+											<div class="form-group">
+												<button class="btn btn-success" type="submit">Send request</button>
+												<a class="btn btn-info explorer-btn" target="_blank" href="#">Open in explorer</a>
+												<button class="btn btn-danger clear-btn" type="button">Clear</button>
+											</div>
+										</div>
+										<div class="col">
+											<div class="form-group">
+												<label>Result:</label>
+												<textarea class="form-control" name="log" rows="7" readonly></textarea>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<form id="get-tx-form">
+								<fieldset>
+									<div class="row">
+										<div class="col">
+											<h5 class="card-title"><a target="_blank" href="https://github.com/epexa/metahash-js#fetchhistory">getTx</a></h5>
+											<h6 class="card-subtitle mb-2 text-muted">get transaction information by hash</h6>
+											<br>
+											<div class="form-group">
+												<label for="get-tx-hash">Hash:</label>
+												<input type="text" class="form-control" name="hash" id="get-tx-hash" placeholder="2af70ff53c2f6e3d28aea8ee4fb566e41fdb2e4ed061ab7ca7989bd4f4a681ab" required>
+												<small class="form-text text-muted">Example: 2af70ff53c2f6e3d28aea8ee4fb566e41fdb2e4ed061ab7ca7989bd4f4a681ab</small>
+											</div>
+											<div class="form-group">
+												<button class="btn btn-success" type="submit">Send request</button>
+												<a class="btn btn-info explorer-btn" target="_blank" href="#">Open in explorer</a>
+												<button class="btn btn-danger clear-btn" type="button">Clear</button>
+											</div>
+										</div>
+										<div class="col">
+											<div class="form-group">
+												<label>Result:</label>
+												<textarea class="form-control" name="log" rows="7" readonly></textarea>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</article>
+		<br>
+		<footer class="footer">
+			<div class="container-fluid">
+				<span class="text-muted">MetaHash @ 2018</span>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.23/dist/bootstrap-native-v4.min.js"></script>
+		<script src="metahash.min.js"></script>
+		<script>
+			const camelCase = (str) => {
+				str = str.replace(/[=\[\]"]/g, ' ').replace(/  +/g, ' ').replace(/[#\.]/g, '');
+				str = str.replace(/-([a-z])/g, (_m, l) => {
+					return l.toUpperCase();
+				});
+				return str.replace(/ ([a-z])/g, (_m, l) => {
+					return l.toUpperCase();
+				});
+			}
+
+			const initHtmlElements = ($htmlElements) => {
+				for (let name in $htmlElements) {
+					let nameConst = $htmlElements[name];
+					nameConst = camelCase(nameConst);
+					eval(`window.$${nameConst} = document.querySelector('${$htmlElements[name]}');`);
+				}
+			};
+		
+			initHtmlElements([ '#network-form', '#network-form input[name="ip-address"]', '#fetch-balance-form', '#fetch-balance-form fieldset', '#fetch-balance-form input[name="address"]', '#fetch-balance-form textarea[name="log"]' , '#fetch-balance-form a[class="btn btn-info explorer-btn"]', '#fetch-history-form', '#fetch-history-form fieldset', '#fetch-history-form input[name="address"]', '#fetch-history-form textarea[name="log"]' , '#fetch-history-form a[class="btn btn-info explorer-btn"]', '#get-tx-form', '#get-tx-form fieldset', '#get-tx-form input[name="hash"]', '#get-tx-form textarea[name="log"]' , '#get-tx-form a[class="btn btn-info explorer-btn"]' ]);
+			
+			//metahash.apiUrl = 'http://172.104.224.65:5795'; // net-dev
+			$networkFormInputNameIpAddress.value = metahash.apiUrl;
+			
+			explorerUrl = 'http://mhscan.com/';
+		
+			$fetchBalanceForm.addEventListener('submit', (e) => {
+				e.preventDefault();
+				metahash.apiUrl = 'http://172.104.224.65:5795';
+				metahash.fetchBalance($fetchBalanceFormInputNameAddress.value, (res, err) => {
+					if (res) {
+						console.log('fetchBalance', res);
+						$fetchBalanceFormTextareaNameLog.value = JSON.stringify(res);
+						$fetchBalanceFormAClassBtnBtnInfoExplorerBtn.href = explorerUrl + '?page=address&id=' + $fetchBalanceFormInputNameAddress.value;
+					}
+					else console.error('fetchBalance', err)
+				});
+			});
+			
+			$fetchHistoryForm.addEventListener('submit', (e) => {
+				e.preventDefault();
+				metahash.apiUrl = 'http://172.104.224.65:5795';
+				metahash.fetchHistory($fetchHistoryFormInputNameAddress.value, (res, err) => {
+					if (res) {
+						console.log('fetchHistory', res);
+						$fetchHistoryFormTextareaNameLog.value = JSON.stringify(res);
+						$fetchHistoryFormAClassBtnBtnInfoExplorerBtn.href = explorerUrl + '?page=address&id=' + $fetchHistoryFormInputNameAddress.value;
+					}
+					else console.error('fetchHistory', err)
+				});
+			});
+			
+			$getTxForm.addEventListener('submit', (e) => {
+				e.preventDefault();
+				metahash.apiUrl = 'http://172.104.224.65:5795';
+				metahash.getTx($getTxFormInputNameHash.value, (res, err) => {
+					if (res) {
+						console.log('getTx', res);
+						$getTxFormTextareaNameLog.value = JSON.stringify(res);
+						$getTxFormAClassBtnBtnInfoExplorerBtn.href = explorerUrl + '?page=tx&id=' + $getTxFormInputNameHash.value;
+					}
+					else console.error('getTx', err)
+				});
+			});
+			
+		</script>
+		
+		
+	</body>
+</html>
+
+
